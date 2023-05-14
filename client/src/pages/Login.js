@@ -32,19 +32,21 @@ const Login = () => {
         <>
             <div className="register-page">
                 {loading && <Spinner />}
-                <Form layout="vertical" onFinish={submitHandler}>
-                    <h1>Login Form</h1>
-                    <Form.Item label="Email" name="email">
-                        <Input type="email" />
-                    </Form.Item>
-                    <Form.Item label="Password" name="password">
-                        <Input type="password"/>
-                    </Form.Item>
-                    <div className="d-flex justify-content-between">
-                        <Link to="/register">Not a user ? Click here to login</Link>
-                        <button className="btn btn-primary">Login</button>
-                    </div>
-                </Form>
+                <div className="login-card">
+                    <Form layout="vertical" onFinish={submitHandler}>
+                        <h1>Login Form</h1>
+                        <Form.Item label="Email" name="email">
+                            <Input type="email" />
+                        </Form.Item>
+                        <Form.Item label="Password" name="password">
+                            <Input type="password"/>
+                        </Form.Item>
+                        <div className="d-flex justify-content-between">
+                            <Link to="/register">Not a user ? Click here to login</Link>
+                            <button className="btn btn-primary">Login</button>
+                        </div>
+                    </Form>
+                </div>
             </div>
         </>
     )

@@ -75,7 +75,7 @@ const HomePage = () => {
       }
     }
     getAllTransactions();
-  },[frequency, selectedDate, type])
+  },[frequency, selectedDate, type, showModal])
 
   // Delete Handler
   const handleDelete = async (record) => {
@@ -122,8 +122,8 @@ const HomePage = () => {
     <Layout>
       {loading && <Spinner />}
         <div className="filters">
-          <div className="d-flex">
-            <h6>Select Frequency</h6>
+          <div className="dropdown-align">
+            <h6 className="mt-1">Select Frequency</h6>
             <Select value={frequency} onChange={(values) => setFrequency(values)}>
               <Select.Option value="7">LAST 1 Week</Select.Option>
               <Select.Option value="30">LAST 1 Month</Select.Option>
@@ -132,14 +132,13 @@ const HomePage = () => {
             </Select>
             {frequency === 'custom' && <RangePicker value={selectedDate} onChange={(values) => setSelectedDate(values)} />}
           </div>
-          <div className="d-flex">
-            <h6>Select Type</h6>
+          <div className="dropdown-align type-dropdown">
+            <h6 className="mt-1">Select Type</h6>
             <Select value={type} onChange={(values) => setType(values)}>
               <Select.Option value="all">ALL</Select.Option>
               <Select.Option value="income">INCOME</Select.Option>
               <Select.Option value="expense">EXPENSE</Select.Option>
             </Select>
-            {frequency === 'custom' && <RangePicker value={selectedDate} onChange={(values) => setSelectedDate(values)} />}
           </div>
             <div className="switch-icon">
               <UnorderedListOutlined className={`mx-2 ${viewData === 'table' ? 'active-icon': 'inactive-icon '}`} onClick={() => setViewData('table')}/>

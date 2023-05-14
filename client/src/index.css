@@ -13,6 +13,23 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
+  background: #f5d9ef;
+}
+
+.register-page .register-card {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 20px 15px;
+  width: 25%;
+  background-color: #f1f5e4;
+}
+
+.register-page .login-card {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 20px 15px;
+  width: 25%;
+  background-color: #d6f0f8;
 }
 
 /* transaction page */
@@ -22,6 +39,38 @@
   justify-content: space-between;
   padding: 15px 20px;
   box-shadow: 0 0 3px gray;
+}
+
+.dropdown-align {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dropdown-align .ant-select-selector {
+  margin: 8px;
+}
+
+.type-dropdown .ant-select-single{
+  width: 100px;
+}
+
+.cat-wise-income-heading {
+  background-color: #31f331;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.cat-wise-expense-heading {
+  background-color: #f36a6a;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
 /* antd icons */
